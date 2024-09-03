@@ -1,4 +1,20 @@
 {
   "name": "git_config",
-  "packageManager": "yarn@4.4.1"
+  "packageManager": "yarn@4.4.1",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "view:git config": "git config --list",
+    "bootstrap": "yarn dlx @yarnpkg/sdks vscode",
+    "about:clean": "echo 'clean yarn cache in case install packages fail'; yarn cache clean"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^5.4.0",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.4.5"
+  }
 }
